@@ -65,6 +65,18 @@ class CocktailListRepositoryImpl @Inject constructor(
     }
 
     override suspend fun getCocktail(id: Int): Flow<Resource<Cocktail>> {
-        TODO("not yet implemented")
+        return flow {
+            emit(Resource.Loading(true))
+
+            val cocktailEntity = cocktailDatabase.cocktailDao.getCocktailById(id = id)
+            if (cocktailEntity != null) {
+                emit(
+                    Resource.Success(cocktailEntity.toCocktail(cocktailEntity.category))
+                )
+                emit(Resource.Loading(false))
+            }
+
+            emit(Resource.Error("Error no such cocktail"))
+        }
     }
 }
