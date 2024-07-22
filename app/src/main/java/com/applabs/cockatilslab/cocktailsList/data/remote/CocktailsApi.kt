@@ -20,6 +20,6 @@ interface CocktailsApi {
 
         const val BASE_URL = "https://www.thecocktaildb.com/api/json/v2/"
         const val INGREDIENTS_BASE_URL = "https://www.thecocktaildb.com/images/ingredients/"
-        const val API_KEY = "XXXXXX"
+        const val API_KEY = "XXXXXXX"
     }
 }
