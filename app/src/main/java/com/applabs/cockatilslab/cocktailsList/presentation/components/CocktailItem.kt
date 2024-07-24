@@ -41,14 +41,14 @@ import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import coil.size.Size
 import com.applabs.cockatilslab.cocktailsList.domain.model.Cocktail
-import com.applabs.cockatilslab.cocktailsList.util.RatingBar
 import com.applabs.cockatilslab.cocktailsList.util.Screen
 import com.applabs.cockatilslab.cocktailsList.util.getAverageColor
 
 @Composable
 fun CocktailItem(
     cocktail: Cocktail,
-    navHostController: NavHostController
+    navHostController: NavHostController,
+    modifier: Modifier
 ) {
     val imageState = rememberAsyncImagePainter(
         model = ImageRequest.Builder(LocalContext.current)
@@ -63,7 +63,7 @@ fun CocktailItem(
     }
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .wrapContentHeight()
             .width(200.dp)
             .padding(8.dp)
