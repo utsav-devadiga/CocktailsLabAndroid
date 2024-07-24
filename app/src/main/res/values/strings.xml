@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CockatilsLab</string>
+    <string name="popular">Popular</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="popular_cocktails">Popular Cocktails</string>
+    <string name="upcoming_cocktails">Upcoming Cocktails</string>
 </resources>

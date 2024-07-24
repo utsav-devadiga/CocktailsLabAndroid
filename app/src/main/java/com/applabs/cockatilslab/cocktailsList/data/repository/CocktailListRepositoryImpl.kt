@@ -25,7 +25,7 @@ class CocktailListRepositoryImpl @Inject constructor(
             emit(Resource.Loading(true))
             val localCockTailList = cocktailDatabase.cocktailDao.getCocktailListByCategory(category)
 
-            val shouldLoadLocalCocktail = localCockTailList.isNotEmpty() && !forceFetchFromRemote
+            val shouldLoadLocalCocktail = false //localCockTailList.isNotEmpty() && !forceFetchFromRemote
 
             if (shouldLoadLocalCocktail) {
                 emit(Resource.Success(
