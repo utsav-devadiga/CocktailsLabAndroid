@@ -9,7 +9,7 @@ interface CocktailDao {
     @Upsert
     suspend fun upsertCocktailList(cocktailList: List<CocktailEntity>)
 
-    @Query("SELECT * FROM CocktailEntity WHERE id =:id")
+    @Query("SELECT * FROM CocktailEntity WHERE idDrink =:id")
     suspend fun getCocktailById(id: Int): CocktailEntity
 
 

@@ -1,6 +1,6 @@
 package com.applabs.cockatilslab.cocktailsList.util
 
-sealed class Screen(val rout: String) {
+sealed class Screen(val route: String) {
     object Home : Screen("main")
     object PopularCocktailList : Screen("popularCocktail")
     object FavouriteCocktailList : Screen("FavouriteCocktail")
